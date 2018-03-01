@@ -1,0 +1,22 @@
+{
+  "name": "stack",
+  "version": "1.0.0",
+  "description": "...",
+  "private": true,
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "preinstall": "chmod +w package.json && chmod +w package-lock.json || true",
+    "deploy": "serverless deploy --verbose",
+    "check": "npm run test && npm run lint",
+    "test": "mocha --recursive tests",
+    "lint": "eslint source tests"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.17.0",
+    "mocha": "^5.0.1",
+    "serverless": "^1.26.0"
+  }
+}
